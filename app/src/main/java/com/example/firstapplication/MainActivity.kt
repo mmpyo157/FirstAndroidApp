@@ -19,5 +19,16 @@ class MainActivity : AppCompatActivity() {
             //次のActivity実行
             startActivity(nextIntent)
         }
+
+        val web_btn = findViewById<Button>(R.id.btn_web)    //画面のボタン
+        web_btn.setOnClickListener {
+            //Intentオブジェクト生成、遷移画面定義
+            val nextIntent = Intent(this, WebviewActivity::class.java)
+            //Intentオブジェクトにテキストの内容をプットする
+//            nextIntent.putExtra("main_tv", main_tv.text.toString())
+            //次のActivity実行
+            startActivity(nextIntent)
+
+        }
     }
 }
