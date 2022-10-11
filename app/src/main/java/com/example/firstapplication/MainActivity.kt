@@ -1,6 +1,7 @@
 package com.example.firstapplication
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -14,21 +15,22 @@ class MainActivity : AppCompatActivity() {
         nextActivity_btn.setOnClickListener {
             //Intentオブジェクト生成、遷移画面定義
             val nextIntent = Intent(this, ColorActivity::class.java)
-            //Intentオブジェクトにテキストの内容をプットする
-//            nextIntent.putExtra("main_tv", main_tv.text.toString())
             //次のActivity実行
             startActivity(nextIntent)
         }
-
         val web_btn = findViewById<Button>(R.id.btn_web)    //画面のボタン
         web_btn.setOnClickListener {
             //Intentオブジェクト生成、遷移画面定義
             val nextIntent = Intent(this, WebviewActivity::class.java)
-            //Intentオブジェクトにテキストの内容をプットする
-//            nextIntent.putExtra("main_tv", main_tv.text.toString())
             //次のActivity実行
             startActivity(nextIntent)
-
+        }
+        val browser_btn = findViewById<Button>(R.id.btn_browser)    //画面のボタン
+        browser_btn.setOnClickListener {
+            //外部ブラウザ　browser_url
+            val url: String = getString(R.string.browser_url)
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    startActivity(intent)
         }
     }
 }

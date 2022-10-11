@@ -10,7 +10,7 @@ class WebviewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_webview)
 
         val webView: WebView = findViewById(R.id.webView)
-        val string: String = getString(R.string.webView_activity)
+        val string: String = getString(R.string.webView_url)
         webView.loadUrl(string)
 
 
