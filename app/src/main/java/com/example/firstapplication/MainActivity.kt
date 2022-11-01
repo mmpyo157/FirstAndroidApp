@@ -1,5 +1,7 @@
 package com.example.firstapplication
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -32,5 +34,26 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                     startActivity(intent)
         }
+
+        val dialog_btn = findViewById<Button>(R.id.btn_dialog)    //画面のボタン
+        dialog_btn.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setMessage(R.string.dialog_start_game)
+                .setPositiveButton(R.string.start,
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // START THE GAME!
+                        //Intentオブジェクト生成、遷移画面定義
+                        val nextIntent = Intent(this, ColorActivity::class.java)
+                        //次のActivity実行
+                        startActivity(nextIntent)
+                    })
+                .setNegativeButton(R.string.cancel,
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // User cancelled the dialog
+                    })
+            // Create the AlertDialog object and return it
+                .show()
+            builder.create()
+        } ?: throw IllegalStateException("Activity cannot be null")
     }
 }
