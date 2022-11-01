@@ -42,12 +42,17 @@ class MainActivity : AppCompatActivity() {
                 .setPositiveButton(R.string.start,
                     DialogInterface.OnClickListener { dialog, id ->
                         // START THE GAME!
+                        //Intentオブジェクト生成、遷移画面定義
+                        val nextIntent = Intent(this, ColorActivity::class.java)
+                        //次のActivity実行
+                        startActivity(nextIntent)
                     })
                 .setNegativeButton(R.string.cancel,
                     DialogInterface.OnClickListener { dialog, id ->
                         // User cancelled the dialog
                     })
             // Create the AlertDialog object and return it
+                .show()
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
     }
