@@ -1,18 +1,18 @@
-package com.example.firstapplication
-
-import android.app.AlertDialog
-import android.app.Dialog
-import android.content.DialogInterface
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-
-//class DialogActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_dialog)
-//    }
-//}
-
+//package com.example.firstapplication
+//
+//import android.app.AlertDialog
+//import android.app.Dialog
+//import android.content.DialogInterface
+//import android.os.Bundle
+//import androidx.appcompat.app.AppCompatActivity
+//
+////class DialogActivity : AppCompatActivity() {
+////    override fun onCreate(savedInstanceState: Bundle?) {
+////        super.onCreate(savedInstanceState)
+////        setContentView(R.layout.activity_dialog)
+////    }
+////}
+//
 //class DialogActivity : AppCompatActivity() {
 //
 //    override fun onCreateDialog(id: Int, savedInstanceState: Bundle?): Dialog? {

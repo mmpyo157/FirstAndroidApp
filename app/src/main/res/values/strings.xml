@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">First Application</string>
-    <string name="color_activity_text">st画面遷移成功！</string>
+    <string name="color_activity_text">画面遷移成功！</string>
     <string name="webView_url">"https://eyesonme-movie.jp/"</string>
     <string name="dialog_start_game">"先に進みますか？"</string>
     <string name="start">"進む"</string>
     <string name="cancel">"やめる"</string>
     <string name="browser_url">"https://google.co.jp"</string>
+    <string name="map_text">Google Map</string>
+    <string name="map_api">"AIzaSyBGUeL7ZKOMml6FaOZQ0IUu3L_022iIhtY"</string>
 </resources>
