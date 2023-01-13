@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             //外部ブラウザ　browser_url
             val url: String = getString(R.string.browser_url)
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                    startActivity(intent)
+            startActivity(intent)
         }
 
         val dialog_btn = findViewById<Button>(R.id.btn_dialog)    //画面のボタン「ダイアログ」
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     DialogInterface.OnClickListener { dialog, id ->
                         // User cancelled the dialog
                     })
-            // Create the AlertDialog object and return it
+                // Create the AlertDialog object and return it
                 .show()
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
