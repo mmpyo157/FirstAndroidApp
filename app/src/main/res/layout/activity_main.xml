@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="次の画面へ"
         android:id="@+id/btn_nextActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_1" />
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="ダイアログ"
         android:id="@+id/btn_dialog"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_nextActivity"
+        app:layout_constraintBottom_toTopOf="@+id/btn_web"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nextActivity" />
